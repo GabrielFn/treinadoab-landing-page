@@ -47,7 +47,7 @@
   transform: rotateX(180deg);
   position: absolute;
   background-repeat: no-repeat;
-  background-image:url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTI4MCAxMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDEyODAgMTAwOyIgIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMHB4Ij4KICA8ZyBmaWxsPSIjZmZmZmZmIj4gCjxwYXRoICBkPSJNMCw4Mi43YzAsMCwyODAuMyw1MCw2MTItMzEuM3M2NjgsMCw2NjgsMFYwSDBWODIuN3oiLz4KICA8L2c+Cjwvc3ZnPg==');
+  background-image:url(assets/images/wave.svg);
 }
 
 .header-image-container {
@@ -262,6 +262,73 @@
   font-family: 'Montserrat';
   line-height: 1.8em;
   margin-top: 10px;
+}
+
+.time-offer {
+  position: relative;
+  margin-top: 100px;
+  padding-top: 300px;
+  padding-bottom: 300px;
+  background-image: linear-gradient(45deg, #cb6ce6 0%, #b928e3 100%);
+}
+
+.time-offer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+}
+
+.time-offer-content > h2 {
+  font-size: 62px;
+  color: white;
+  text-align: center;
+}
+
+.time-offer-content > p {
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+.time-offer-content > a {
+  border: 3px solid #fff;
+  font-family: 'Montserrat';
+  font-size: 21px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-top: 40px;
+}
+
+.time-offer-divider-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url(assets/images/wave.svg);
+}
+
+.time-offer-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background-image: url(assets/images/time-offer-divider.svg);
+  transform: rotateX(180deg);
 }
 
 @media screen and (max-width: 1024px) {
