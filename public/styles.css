@@ -115,6 +115,7 @@
   font-size: 32px;
   color: #cb6ce6;
   font-weight: 400;
+  padding: 0 16px;
 }
 
 .results-title > h3 {
@@ -316,7 +317,7 @@
 
 .time-offer-divider-top {
   position: absolute;
-  top: 0;
+  top: -1px;
   width: 100%;
   height: 150px;
   background-image: url(assets/images/wave.svg);
@@ -324,11 +325,80 @@
 
 .time-offer-divider-bottom {
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
   height: 150px;
   background-image: url(assets/images/time-offer-divider.svg);
   transform: rotateX(180deg);
+}
+
+.depoiments {
+  margin-top: 100px;
+}
+
+.depoiment-list {
+  margin-top: 60px;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 30px;
+  padding: 0 16px;
+}
+
+.depoiment-list-item {
+  flex: 1;
+  border-top: 10px solid #cb6ce6;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 60px;
+  transform: skewy(-5deg);
+  max-width: 420px;
+}
+
+.depoiment-list-item__image {
+  height: 65px;
+  border-radius: 50%;
+  position: absolute;
+  top: -55px;
+  border: 3px solid #cb6ce6;
+  transform: skewy(5deg);
+  background-image: url(assets/images/trainer.jpg);
+  background-size: cover;
+  width: 94px;
+  height: 94px;
+}
+
+.depoiment-list-item__text {
+  transform: skewy(5deg);
+  padding: 45px 14%;
+  text-align: center;
+}
+
+.depoiment-list-item__text > p {
+  padding: 16px 0;
+  line-height: 1.8em;
+  font-family: 'Montserrat';
+}
+
+.depoiment-name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.depoiment-name > p {
+  font-weight: 400;
+  font-family: 'Montserrat';
+}
+
+.depoiment-name > span {
+  color: #999999;
+  font-weight: 400;
+  font-family: 'Montserrat';
 }
 
 @media screen and (max-width: 1024px) {
@@ -422,5 +492,10 @@
 
   .step-by-step-content {
     gap: 40px;
+  }
+
+  .depoiment-list {
+    flex-direction: column;
+    align-items: center;
   }
 }
