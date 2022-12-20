@@ -1,19 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
-
-html,
-body,
-div,
-span,
-button,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-li {
+* {
   margin: 0;
 	padding: 0;
 	border: 0;
@@ -47,6 +32,14 @@ li {
   font-weight: bold;
 }
 
+.subtitle {
+  color: white;
+  font-size: 21px;
+  line-height: 1.7;
+  font-weight: 400;
+  font-family: 'Montserrat';
+}
+
 .first-divider {
   width: 100%;
   bottom: -1px;
@@ -76,6 +69,7 @@ li {
 }
 
 .contact-button {
+  font-family: 'Montserrat';
   width: 50%;
   padding: 20px;
   border-radius: 32px;
@@ -103,6 +97,11 @@ li {
   margin-bottom: 8px;
 }
 
+.objective-item-container > p {
+  font-family: 'Montserrat';
+}
+
+
 .results-container {
   padding-top: 130px;
   padding-bottom: 10px;
@@ -111,16 +110,18 @@ li {
 }
 
 .results-title > h2 {
+  font-family: 'Montserrat';
   text-align: center;
   font-size: 32px;
   color: #cb6ce6;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .results-title > h3 {
   text-align: center;
   font-size: 62px;
   color: #252830;
+  padding: 0 16px;
 }
 
 .result-images {
@@ -185,6 +186,7 @@ li {
 }
 
 .promo-button {
+  font-family: 'Montserrat';
   display: inline-block;
   font-size: 18px;
   color: #ffffff;
@@ -193,6 +195,73 @@ li {
   background-color: #cb6ce6;
   text-decoration: none;
   border: 0px solid #000000;
+}
+
+.step-by-step {
+  margin-top: 100px;
+}
+
+.step-by-step-content {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  gap: 80px;
+  padding: 0 16px;
+}
+
+.step-by-step-content > div {
+  flex: 1;
+}
+
+.step-by-step-title {
+  font-size: 48px;
+  padding-bottom: 10px;
+  line-height: 1.2em;
+}
+
+.step-by-step-title-divider {
+  padding-bottom:20px;
+  margin-top: 10px;
+}
+
+.step-by-step-title-divider > div {
+  display:inline-block;
+  height:2px;
+  max-width:50px;
+  width:100%;
+  background-color:#c25ddf;
+}
+
+.step-by-step-description {
+  font-family: 'Montserrat';
+  line-height: 1.8em;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.steps-row {
+  display: flex;
+  gap: 80px;
+}
+
+.steps-row > div {
+  flex: 1;
+}
+
+.step-title {
+  font-size: 32px;
+  color: #cb6ce6;
+}
+
+.step-description {
+  font-family: 'Montserrat';
+  line-height: 1.8em;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -221,6 +290,10 @@ li {
     color: white;
     font-size: 48px;
     width: 80%;
+  }
+
+  .step-by-step-content {
+    flex-direction: column;
   }
 }
 
@@ -273,5 +346,14 @@ li {
   .result-image-item > img{
     max-width: 400px;
     max-height: 400px;
+  }
+
+  .steps-row {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .step-by-step-content {
+    gap: 40px;
   }
 }
