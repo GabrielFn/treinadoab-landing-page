@@ -13,56 +13,41 @@
       <link rel="stylesheet" type="text/css" href="./styles.css">
   </head>
   <body>
-    <div class="header">
+    
+    <div id="topo" class="header">
       <div class="first-divider"></div>
+      <div class="menu-container">
+        <div class="logo">
+          <img src="./assets/images/menu-logo.png" alt="logo" />
+        </div>
+        <div class="menu-content">
+          <ul>
+            <li><a onclick="redirectoToTop()">Início</a></li>
+            <li><a onclick="redirectToResults()">Resultados</a></li>
+            <li><a onclick="redirectToDepoiments()">Depoimentos</a></li>
+            <li><a onclick="redirectToContacts()">Contato</a></li>
+          </ul>
+        </div>
+      </div>
       <div class="header-container">
         <div class="title-container">
           <h1 class="title">
-            Treinador<br /> Abner
+            O CAMINHO PARA O <span>CORPO DOS SEUS SONHOS</span> ESTÁ AQUI!
           </h1>
+          <br />
           <h2 class="subtitle">
-            Chegou a hora de<br />
-            transformar seu corpo!
+            O profissional ideal para te auxiliar a conseguir de uma vez por todas conquistar o físico que sempre quis!<br /><br />
+            Venha comigo e vivencie a mudança do seu corpo e autoestima para alcançar sua melhor versão o mais rápido possível!
           </h2>
-          <a href="https://wa.me/5518996775497?text=Tenho%20interesse%20na%20CONSULTORIA%20ONLINE" target="_blank" class="contact-button">ENTRAR EM CONTATO</a>
+          <button class="contact-button" onclick='window.open("https://wa.me/5518996775497?text=Tenho%20interesse%20na%20CONSULTORIA%20ONLINE", "_blank")'><b>QUERO COMEÇAR MINHA JORNADA AGORA</b></button>
         </div>
         <div class="header-image-container">
           <img src="./assets/images/trainer.jpg" alt="trainer" style="width: 100%; height: 100%;" />
         </div>
         <div class="break"></div>
-        <ul class="objectives">
-          <li class="objective-item">
-            <div class="objective-item-container">
-              <p class="objective-number" style="background: #c25ddf;">1</p>
-              <h2>Emagrecimento</h2>
-              <p>Para você que quer diminuição de medidas com redução do peso corporal. Vou elaborar um treinamento baseado no aumento do gasto calórico diário de maneira inteligente e eficiente.</p>
-            </div>
-          </li>
-          <li class="objective-item" style="background-color: #c25ddf;">
-            <div class="objective-item-container">
-              <p class="objective-number" style="background: #bc4bdd;">2</p>
-              <h2>Hipertrofia</h2>
-              <p>Pra quem está satisfeito com o percentual de gordura e quer subir medidas e massa muscular. Vamos utilizar exercícios básicos e altamente eficientes para gerar o estímulo ideal para hipertrofia.</p>
-            </div>
-          </li>
-          <li class="objective-item" style="background-color: #bc4bdd;">
-            <div class="objective-item-container">
-              <p class="objective-number" style="background: #b928e3;">3</p>
-              <h2>Definição muscular</h2>
-              <p>Se você estiver querendo subir medidas mas sem ganhar gordura e manter um corpo mais slim, vou montar pra você uma combinação perfeita entre os exercícios aeróbios e musculação.</p>
-            </div>
-          </li>
-          <li class="objective-item" style="background-color: #b928e3;">
-            <div class="objective-item-container">
-              <p class="objective-number" style="background: #b608e9;">4</p>
-              <h2>Treinos personalizados</h2>
-              <p>Treinos personalizados envolvendo um planejamento de musculação, aeróbios e alongamentos individualizados de acordo com as necessidades e preferências do aluno.</p>
-            </div>
-          </li>
-        </ul>
       </div>
     </div>
-    <div class="results-container">
+    <div id="resultados" class="results-container">
       <div class="results-title">
         <h2>Resultados</h2>
         <h3>Centenas de Alunos Satisfeitos</h3>
@@ -183,7 +168,7 @@
         <a href="https://wa.me/5518996775497?text=Tenho%20interesse%20na%20CONSULTORIA%20ONLINE%20com%20desconto" target="_blank">ENTRAR EM CONTATO</a>
       </div>
     </div>
-    <div class="depoiments">
+    <div id="depoimentos" class="depoiments">
       <div class="results-title">
         <h2>O Que os Alunos Dizem da Consultoria Online</h2>
         <h3>Mensagens</h3>
@@ -318,7 +303,7 @@
         </ul>
       </div>
     </div>
-    <div class="contacts">
+    <div id="contato" class="contacts">
       <div class="pricing-title">
         <p>Encontre Seu Tempo</p>
         <h2>Entre em Contato</h2>
@@ -354,4 +339,20 @@
 <script>
   const carousel1 = new Carousel('.carousel-container-1');
   const carousel2 = new Carousel('.carousel-container-2');
+
+  function redirectoToTop() {
+    document.querySelector("#topo").scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  function redirectToResults() {
+    document.querySelector("#resultados").scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function redirectToDepoiments() {
+    document.querySelector("#depoimentos").scrollIntoView({ behavior: 'smooth' })
+  }
+
+  function redirectToContacts() {
+    document.querySelector("#contato").scrollIntoView({ behavior: 'smooth' })
+  }
 </script>
