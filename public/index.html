@@ -20,7 +20,14 @@
         <div class="logo">
           <img src="./assets/images/menu-logo.png" alt="logo" />
         </div>
-        <div class="menu-content">
+        <div class="menu-button">
+          <a href="javascript:void(0);" onclick="myFunction()" class="menu-icon">
+            <div class="menu-icon-line"></div>
+            <div class="menu-icon-line"></div>
+            <div class="menu-icon-line"></div>
+          </a>
+        </div>
+        <div id="myLinks" class="menu-content">
           <ul>
             <li><a onclick="redirectoToTop()">Início</a></li>
             <li><a onclick="redirectToResults()">Resultados</a></li>
@@ -340,19 +347,33 @@
   const carousel1 = new Carousel('.carousel-container-1');
   const carousel2 = new Carousel('.carousel-container-2');
 
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+
+    if (!x.classList.contains('open')) {
+      x.classList.add('open');
+    } else {
+      x.classList.remove('open')
+    }
+  }
+
   function redirectoToTop() {
+    myFunction();
     document.querySelector("#topo").scrollIntoView({ behavior: 'smooth' });
   }
   
   function redirectToResults() {
+    myFunction();
     document.querySelector("#resultados").scrollIntoView({ behavior: 'smooth' });
   }
 
   function redirectToDepoiments() {
+    myFunction();
     document.querySelector("#depoimentos").scrollIntoView({ behavior: 'smooth' })
   }
 
   function redirectToContacts() {
+    myFunction();
     document.querySelector("#contato").scrollIntoView({ behavior: 'smooth' })
   }
 </script>
