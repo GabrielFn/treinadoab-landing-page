@@ -191,7 +191,7 @@
 
 .results-title > h3 {
   text-align: center;
-  font-size: 62px;
+  font-size: 54px;
   color: #252830;
   padding: 0 16px;
 }
@@ -780,6 +780,37 @@
     height: 5px;
     width: 100%;
     background: white;
+  }
+
+  .menu-icon.open > .menu-icon-line {
+    display: none;
+  }
+
+  .menu-icon > svg {
+    display: none;
+    color: white;
+    stroke: white;
+    fill: white;
+  }
+
+  .menu-icon.open > svg {
+    display: block;
+  }
+
+  .menu-close-line-1 {
+    display: none;
+    height: 5px;
+    width: 100%;
+    background: white;
+    transform: rotate(45deg);
+  }
+
+  .menu-close-line-2 {
+    display: none;
+    height: 5px;
+    width: 100%;
+    background: white;
+    transform: rotate(-45deg);
   }
 
   .header-image-container {
